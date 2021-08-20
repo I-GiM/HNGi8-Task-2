@@ -11,8 +11,18 @@ const app = express()
 const port = process.env.PORT
 const router = express.Router()
 
+app.use(express.static('./src/views'))
+
 router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './views', '/index.html'));
+});
+
+app.get('/style.css', (req, res) => {
+  res.sendFile(__dirname, './views', '/style.css');
+});
+
+app.get('/script.js', (req, res) => {
+  res.sendFile(__dirname, './views', '/script.js');
 });
 
 router.post('/message', async (req, res) => {
@@ -63,14 +73,6 @@ router.post('/message', async (req, res) => {
     })
   }
 })
-
-app.get('/style.css', (req, res) => {
-  res.sendFile(__dirname, './views', '/style.css');
-});
-
-app.get('/script.js', (req, res) => {
-  res.sendFile(__dirname, './views', '/script.js');
-});
 
 app.use(express.json())
 app.use('/', router)
