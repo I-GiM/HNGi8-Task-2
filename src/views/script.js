@@ -23,7 +23,8 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     const res = await fetch(`${BASE_API}/message`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
         fullName: document.querySelector('.fullName').value,
