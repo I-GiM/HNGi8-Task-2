@@ -12,7 +12,7 @@ const port = process.env.PORT
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname+'/views/index.html'));
+  res.sendFile(path.join(__dirname, './views', '/index.html'));
 });
 
 router.post('/message', async (req, res) => {
