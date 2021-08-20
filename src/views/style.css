@@ -138,6 +138,18 @@ body {
   color: #888;
 }
 
+.logos {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  margin: 0 auto 24px;
+}
+
+.logos a img {
+  width: 48px;
+  height: 48px;
+}
+
 
 
 @media (min-width: 1024px) {
@@ -160,8 +172,9 @@ body {
     padding: 0 200px 40px 56px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     margin-top: 100px;
-    justify-content: center;
+    align-items: center;
     overflow-y: scroll;
   }
 
