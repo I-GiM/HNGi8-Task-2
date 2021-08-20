@@ -9,7 +9,7 @@ const alertName = (name) => {
 
 alertName(myName)
 
-const BASE_API = 'http://localhost:7000' || 'https://ad-hngi8-task-2'
+const BASE_API = 'http://localhost:7000' || 'https://ad-hngi8-task-2.herokuapp.com'
 
 document.getElementById('contact-form').addEventListener('submit', async (e) => {
   e.preventDefault()
