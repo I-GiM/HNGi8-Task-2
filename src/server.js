@@ -65,11 +65,11 @@ router.post('/message', async (req, res) => {
 })
 
 app.get('/style.css', (req, res) => {
-  res.sendFile(__dirname + '/views/style.css');
+  res.sendFile(__dirname, './views', '/style.css');
 });
 
 app.get('/script.js', (req, res) => {
-  res.sendFile(__dirname + '/views/script.js');
+  res.sendFile(__dirname, './views', '/script.js');
 });
 
 app.use(express.json())
